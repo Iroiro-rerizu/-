@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>いろいろゲームズホームページ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* リセットCSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ボディのスタイル */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* ヘッダーのスタイル */
+        header {
+            background-color: #63c265;
+            color: #7a5a10;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* セクションのスタイル */
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section#home {
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #22a6bb;
+        }
+
+        .project {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            text-align: left;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* フッターのスタイル */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* レスポンシブデザイン */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+            }
+
+            header nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <h1>いろいろホームページ</h1>
+        <nav>
+            <ul>
+                <li><a href="iroiroho-mu.html">ホーム</a></li>
+                <li><a href="iroiromenba-.html">メンバー紹介</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ホームセクション -->
+    <section id="home">
+        <h2>いろメン自己紹介表</h2>
+        <p>こちらは、いろいろゲームズのメンバー自己紹介になっています。</p>
+    </section>
+
+    <!-- イベントセクション -->
+    <section>
+        <h2>自己紹介表</h2>
+        <div class="project">
+            <button id="eventButton0">
+                <h3>れりず</h3>
+                <p>名前、誕生日、血液など</p>
+            </button>
+            
+            <button id="eventButton1">
+                <h3>あや</h3>
+                <p>名前、誕生日、血液など</p>
+            </button>
+        
+            <button id="eventButton2">
+                <h3>ゆー</h3>
+                <p>名前、誕生日、血液など</p>
+            </button>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <p>2024　いろいろゲームズサイト</p>
+    </footer>
+
+    <script>
+        // イベントボタンのリンク設定
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('eventButton0').addEventListener('click', () => {
+                window.location.href = 'れりず.html';
+            });
+            document.getElementById('eventButton1').addEventListener('click', () => {
+                window.location.href = 'あや.html';
+            });
+            document.getElementById('eventButton2').addEventListener('click', () => {
+                window.location.href = 'ゆー.html';
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
