@@ -110,6 +110,25 @@ width:100%;
 table-layout: fixed;
 word-break: break-word;　　/*追加する*/
 }
+@media (max-width: 768px) { /* 画面幅768px以下の場合 */
+    table, tbody, tr {
+        display: block;
+        width: 100%;
+    }
+    tr {
+        margin-bottom: 20px;
+    }
+    th {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9; /* 動画のアスペクト比を維持 */
+    }
+}
 
     </style>
 </head>
