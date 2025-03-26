@@ -13,32 +13,113 @@
             background-color: #fff;
             text-align: center;
         }
+
         header {
             background: linear-gradient(90deg, #ff6b6b, #ffa502);
             color: white;
             padding: 20px;
         }
+
         .logo {
             font-size: 2em;
             font-weight: bold;
         }
+
+        h1 {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        
         nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 10px 0 0;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; /* はみ出さないように折り返し */
+    max-width: 100%;
+    overflow: hidden; /* 画面外へのはみ出し防止 */
+}
+
+nav ul li {
+    display: inline-block;
+    max-width: 30%; /* ボタンの最大幅を制限 */
+    flex: 1;
+    text-align: center;
+}
+
+nav ul li a img {
+    max-width: 100%; /* 画像サイズを自動調整 */
+    height: auto;
+}
+
+
+        /* --- 動画ボックスのスタイル --- */
+        .video-container {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
+            max-width: 1000px;
+            margin: auto;
         }
-        nav ul li {
-            display: inline;
+
+        .video-box {
+            flex: 1;
+            padding: 15px;
+            border-radius: 10px;
+            border: 3px solid black;
         }
-        nav ul li a {
+
+        .video-box h2 {
+            margin-top: 0;
+            padding: 10px;
             color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-            font-weight: bold;
+            font-size: 1.5em;
         }
+
+        .video-box iframe {
+            width: 100%;
+            height: 250px;
+            border-radius: 5px;
+        }
+
+        /* カラー設定 */
+        .intro { background-color: crimson; }
+        .popular { background-color: deepskyblue; }
+        .latest { background-color: mediumvioletred; }
+
+        /* --- スマホ表示用（縦スクロールのみ） --- */
+        @media (max-width: 768px) {
+            .video-container {
+                display: block;
+                width: 90%;
+            }
+
+            .video-box {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+        
+        footer {
+        background-color: #222;  /* 背景色をダークグレー */
+        color: white;            /* 文字色を白 */
+        text-align: center;
+        padding: 15px;
+        font-size: 1em;
+        margin-top: 20px;       /* 上の要素との間隔 */
+    }
+
+    /* フッターを常に下に固定する場合 */
+    @media (min-height: 800px) {
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    }
+
         .hero {
             background-image: url('hero-image.jpg');
             background-size: cover;
@@ -52,51 +133,6 @@
             font-weight: bold;
             text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
         }
-        .container {
-            padding: 40px;
-        }
-        .members {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .member {
-            width: 200px;
-            text-align: center;
-        }
-        .member img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            margin-top: 40px;
-        }
-
-
-        .example3{
-            background: linear-gradient(to right,#e60000,#0068b7,#920783);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 100%;
-            font-weight: bold;
-            display: inline-block;
-        }
-        
-        table, td, th {border: solid 1px black;
-            text-align: center;
-            margin-bottom:20px;}
-        .no {background-color: red}
-        .name {background-color: mediumturquoise}
-        .gender {background-color: mediumorchid}
-
-        table {
-    margin: 0 auto; /* 中央揃え */
-}
-
     </style>
 </head>
 <body>
@@ -104,35 +140,32 @@
         <div class="logo">いろいろ🎮ゲームズ</div>
         <nav>
             <ul>
-                <li><a href="ホームページ.html"><img src="https://www.bannerkoubou.com/image/MESzc6fGKTsYme61742180496_1742180515.png" width="175" height="50" ali="ホームページ"></a></li>
-                <li><a href="メンバー.html">メンバープロフィール</a></li>
-                <li><a href="ネット動画、画像.html">ネット公開画像、動画</a></li>
+                <li><a href="ホームページ.html"><img src="ホーム.png" width="200" height="85" alt="ホームページ画像"></a></li>
+                <li><a href="メンバー.html"><img src="メンバー.png" width="200" height="85" alt="メンバープロフィール画像"></a></li>
+                <li><a href="ネット動画、画像.html"><img src="動画、画像.png" width="200" height="85" alt="動画、画像の画像"></a></li>
             </ul>
         </nav>
     </header>
-    <table>
-        <h1><div class="example3">いろいろ🎮ゲームズ　YouTube動画</div></h1>
-        <colgroup class="no" span="1">
-        <colgroup class="name" span="1">
-            <colgroup class= "gender" span="1">
-        </colgroup>
-        <thead>
-            <tr>
-                <th><div class="example3">いろいろ🎮ゲームズ自己紹介動画</div></th><th><div class="example3">いろいろ🎮ゲームズ人気動画</div></th><th><div class="example3">いろいろ🎮ゲームズ最新動画</div></th>
-            </tr>
-        </thead>
-        <tbody>
-                <th><iframe width="427" height="240" src="https://www.youtube.com/embed/L5xFVRSPNmk?si=2_fYO8bHpW9FmA2u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></th><th><iframe width="427" height="240" src="https://www.youtube.com/embed/W6nFgh4Royk?si=YqWEkv4INPuItSVu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></th><th><iframe width="427" height="240" src="https://www.youtube.com/embed/dpNc9liK_Aw?si=SETE_pz2-g5qOjfO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></th>
-        </tbody>
-    </table>
-    <table>
+
+    <h1>いろいろ🎮ゲームズ　YouTube公開動画</h1>
+    <p>※最新動画の3本のみ</p>
+
+    <div class="video-container">
+        <div class="video-box intro">
+            <h2>NEW</h2>
+            <iframe src="https://www.youtube.com/embed/L5xFVRSPNmk" allowfullscreen></iframe>
+        </div>
+        <div class="video-box popular">
+            <h2>一つ前の動画</h2>
+            <p>現在はありません。</p>
+        </div>
+        <div class="video-box latest">
+            <h2>二つ前の動画</h2>
+            <p>現在はありません。</p>
+        </div>
     </div>
     <footer>
         <p>&copy; 2025 いろいろ🎮ゲームズ</p>
-        <img src="https://yt3.googleusercontent.com/mmd7iuMkoN5MAT2CB5KhOfy1syQnwdHGdATMwkN39ic8uD7s4UiX4ZZOtT_DJ48Se8gjuWjoRw=s160-c-k-c0x00ffffff-no-rj" width="50" height="50" alt="いろいろ🎮ゲームズ公式画像">
-        <img src="https://yt3.googleusercontent.com/mmd7iuMkoN5MAT2CB5KhOfy1syQnwdHGdATMwkN39ic8uD7s4UiX4ZZOtT_DJ48Se8gjuWjoRw=s160-c-k-c0x00ffffff-no-rj" width="50" height="50" alt="公式画像">
-        <img src="https://yt3.googleusercontent.com/mmd7iuMkoN5MAT2CB5KhOfy1syQnwdHGdATMwkN39ic8uD7s4UiX4ZZOtT_DJ48Se8gjuWjoRw=s160-c-k-c0x00ffffff-no-rj" width="50" height="50" alt="いろいろ🎮ゲームズ公式画像">
-        <img src="https://yt3.googleusercontent.com/mmd7iuMkoN5MAT2CB5KhOfy1syQnwdHGdATMwkN39ic8uD7s4UiX4ZZOtT_DJ48Se8gjuWjoRw=s160-c-k-c0x00ffffff-no-rj" width="50" height="50" alt="いろいろ🎮ゲームズ公式画像">
     </footer>
 </body>
 </html>
