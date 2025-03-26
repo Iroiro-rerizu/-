@@ -23,22 +23,29 @@
             font-weight: bold;
         }
         nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 10px 0 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        nav ul li {
-            display: inline;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-            font-weight: bold;
-        }
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; /* はみ出さないように折り返し */
+    max-width: 100%;
+    overflow: hidden; /* 画面外へのはみ出し防止 */
+}
+
+nav ul li {
+    display: inline-block;
+    max-width: 30%; /* ボタンの最大幅を制限 */
+    flex: 1;
+    text-align: center;
+}
+
+nav ul li a img {
+    max-width: 100%; /* 画像サイズを自動調整 */
+    height: auto;
+}
+
         .hero {
             background-image: url('hero-image.jpg');
             background-size: cover;
@@ -164,12 +171,12 @@ hr {
   <header>
     <div class="logo">いろいろ🎮ゲームズ</div>
     <nav>
-        <ul>
-                <li><a href="ホームページ.html"><img src="https://www.bannerkoubou.com/image/MESzc6fGKTsYme61742180496_1742180515.png" width="175" height="50" ali="ホームページ"></a></li>
-                <li><a href="メンバー.html">メンバープロフィール</a></li>
-                <li><a href="ネット動画、画像.html">ネット公開画像、動画</a></li>
+            <ul>
+                <li><a href="ホームページ.html"><img src="ホーム.png" width="200" height="85" alt="ホームページ画像"></a></li>
+                <li><a href="メンバー.html"><img src="メンバー.png" width="200" height="85" alt="メンバープロフィール画像"></a></li>
+                <li><a href="ネット動画、画像.html"><img src="動画、画像.png" width="200" height="85" alt="動画、画像の画像"></a></li>
             </ul>
-    </nav>
+        </nav>
 </header>
     <div class="profile-container">
         <div class="profile-card-1">
@@ -182,9 +189,9 @@ hr {
                 <li>❤️ <b>血液型</b> / B型</li>
                 <li>⭐ <b>星座</b> / かに座</li>
                 <li>🎂 <b>誕生日</b> / 7月7日</li>
-                <li>💙 <b>好きなこと</b> / 機械、情報系</li>
+                <li>💙 <b>好きなこと</b> / 機械　情報系</li>
                 <li>💙 <b>苦手なこと</b> / 勉強</li>
-                <li>💙 <b>特異なこと</b> / 走ること、プログラミングをすること</li>
+                <li>💙 <b>特異なこと</b> / 走ること　プログラミングをすること</li>
             </ul>
 
             <a href="https://www.youtube.com/@Rerizu" target="_blank" class="youtube-button">
@@ -224,7 +231,7 @@ hr {
             <li>❤️ <b>血液型</b> / 型</li>
             <li>⭐ <b>星座</b> / 座</li>
             <li>🎂 <b>誕生日</b> / 月日</li>
-            <li>💜 <b>好きなこと</b> / </li>
+            <li>💜 <b>好きなこと</b> /サッカー　スケートボード </li>
             <li>💜 <b>苦手なこと</b> / </li>
             <li>💜 <b>特異なこと</b> / </li>
         </ul>
